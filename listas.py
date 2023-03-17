@@ -86,3 +86,18 @@ for item in linguagens:
         linguagens_com_java.append(item)
 print(f'Linguagens Java: {linguagens_com_java}.')
 
+
+#map - é utilizada para aplicar uma determinada função em cada item de um objeto iterável.
+#Para que essa transformação seja feita, a função map() exige que sejam passados dois parâmetros: a função e o objeto iterável.
+
+linguagens_map = '''Python Java JavaScript C C# C++ Swift Go Kotlin'''.split()
+#além de usar a função map, temos que transformar o resultado gerado em uma lista
+nova_lista = list(map(lambda x: x.lower(), linguagens_map))
+print(f'A nova lista fica assim: {nova_lista}.')
+
+#filter - em as mesmas características da função map(), mas, em vez de usarmos uma função para transformar os valores da lista, nós a usamos para filtrar.
+
+numeros = list(range(0, 21))
+numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
+print(numeros_pares)
+
